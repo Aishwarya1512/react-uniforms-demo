@@ -10,8 +10,8 @@
 
 ### Project Structure
 
-- [client](clients/) has the main bootstrap files
-- [imports](imports/) folder has the custom form components.
+- [client](./clients) has the main bootstrap files
+- [imports](./imports) folder has the custom form components.
 
 ### Local setup
 
