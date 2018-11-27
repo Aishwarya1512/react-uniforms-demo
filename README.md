@@ -1,6 +1,6 @@
 ## react-uniforms-demo
 
-#### Live demo can be viewed at: [qa.panitr.com](http://qa.panitr.com:9090)
+#### Live demo can be viewed at: [Demo link](http://139.59.47.201:9090)
 
 ### List of main technologies
 
