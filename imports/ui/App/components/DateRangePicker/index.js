@@ -17,28 +17,28 @@ const transformDates = (dates, value, onChange) => {
     start = dates[0].toDate();
     stop = dates[1].toDate();
 
-    onChange({start, stop})
+    onChange({ start, stop })
     return dates;
 }
 
-const DateRangePicker = ({onChange, value, label, ...props}) => {
+const DateRangePicker = ({ onChange, value, label, ...props }) => {
 
     const nonUniformProps = filterDOMProps(props);
 
     return (
         <Row span={24}>
             <Col span={24}>
-            {label}:
+                {label}:
             </Col>
             <Col span={24}>
-            <RangePicker
-                className='range-picker'
-                onChange={dates => transformDates(dates, value, onChange)}
-                {...nonUniformProps}
-            />
+                <RangePicker
+                    className='range-picker'
+                    onChange={dates => transformDates(dates, value, onChange)}
+                    {...nonUniformProps}
+                />
             </Col>
         </Row>
-       )
+    )
 }
 
 DateRangePicker.propTypes = {

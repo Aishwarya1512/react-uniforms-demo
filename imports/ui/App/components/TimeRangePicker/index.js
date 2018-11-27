@@ -27,13 +27,13 @@ const transformMoments = (time, value, onChange, selector) => {
 const generateDisableHours = (hours, selector) => {
     let threshold = 0;
     let disableHours = [];
-    if( selector === 'start') {
+    if (selector === 'start') {
         threshold = (23 - hours) + 1; // increment by 1 to include the stop hour as well in the array
-        disableHours = Array(threshold).fill().map((value, index) => hours+index);
+        disableHours = Array(threshold).fill().map((value, index) => hours + index);
     }
-    if(selector === 'stop') {
-        threshold = hours+1; // increment by 1 to include the start hour as well in the array
-        disableHours = Array(threshold).fill().map((value, index) => hours-index);
+    if (selector === 'stop') {
+        threshold = hours + 1; // increment by 1 to include the start hour as well in the array
+        disableHours = Array(threshold).fill().map((value, index) => hours - index);
     }
     return disableHours;
 }
@@ -41,11 +41,11 @@ const generateDisableHours = (hours, selector) => {
 const disabledHours = (value, selector) => {
     let disableHours = [];
     const { start, stop } = value;
-    if(selector === 'start' && stop) {
+    if (selector === 'start' && stop) {
         disableHours = generateDisableHours(stop.getHours(), selector);
     }
 
-    if(selector === 'stop' && start) {
+    if (selector === 'stop' && start) {
         disableHours = generateDisableHours(start.getHours(), selector);
     }
     return disableHours;
@@ -73,8 +73,8 @@ const TimeRangePicker = ({ onChange, value, label, ...props }) => {
                 <Col span={10}>
                     <TimePicker
                         disabledHours={() => disabledHours(value, 'stop')}
-                        onChange={stopTime => transformMoments(stopTime, value, onChange, 'stop')} 
-                        {...nonUniformProps} 
+                        onChange={stopTime => transformMoments(stopTime, value, onChange, 'stop')}
+                        {...nonUniformProps}
                     />
                 </Col>
             </Col>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'antd';
 import AutoForm from 'uniforms/AutoForm';
@@ -10,11 +10,11 @@ import CustomTextField from '../CustomTextField';
 import DateRangePicker from '../DateRangePicker';
 import TimeRangePicker from '../TimeRangePicker';
 
-const SignupForm = ({handleSubmitSuccess}) => {
-        return (
-           <Row gutter={16}>
-               <Col span={24}>
-                <AutoForm 
+const SignupForm = ({ handleSubmitSuccess }) => {
+    return (
+        <Row gutter={16}>
+            <Col span={24}>
+                <AutoForm
                     schema={SignupSchema}
                     onSubmitSuccess={handleSubmitSuccess}
                 >
@@ -25,10 +25,10 @@ const SignupForm = ({handleSubmitSuccess}) => {
                         <CustomTextField name="lastname" />
                     </Col>
                     <Col span={12}>
-                        <DateRangePicker name="dateRange"/>
+                        <DateRangePicker name="dateRange" />
                     </Col>
                     <Col span={12}>
-                        <TimeRangePicker name="timeRange"/>
+                        <TimeRangePicker name="timeRange" />
                     </Col>
                     <Col span={24}>
                         <ErrorsField />
@@ -37,9 +37,13 @@ const SignupForm = ({handleSubmitSuccess}) => {
                         <SubmitField />
                     </Col>
                 </AutoForm>
-               </Col>
-           </Row> 
-        )
+            </Col>
+        </Row>
+    )
+}
+
+SignupForm.propTypes = {
+    handleSubmitSuccess: PropTypes.func.isRequired
 }
 
 export default SignupForm;
