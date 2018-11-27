@@ -18,3 +18,6 @@
 - clone the repo
 - do ```npm install```
 - run the following command to start the local server at port 3000 ```npm start```
+
+### Demo gif
+![demo-video](https://user-images.githubusercontent.com/22440334/49080987-5a95f680-f26b-11e8-8693-10a507e815b1.gif)
