@@ -1,0 +1,23 @@
+{
+  "name": "react-uniforms-antd-form",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.5",
+    "antd": "^3.10.9",
+    "indexof": "0.0.1",
+    "meteor-node-stubs": "^0.4.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "uniforms": "^1.28.0",
+    "uniforms-antd": "^1.28.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js"
+    }
+  }
+}

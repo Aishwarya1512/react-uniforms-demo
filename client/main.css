@@ -1,0 +1,18 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+.main__title {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0px;
+}
+.form__wrapper {
+  max-width: 80%;
+  margin: 24px auto !important;
+}
+.submit__field__wrapper {
+  display: flex !important;
+  margin: 32px 0px 0px 0px;
+  justify-content: center;
+}
