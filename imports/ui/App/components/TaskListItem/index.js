@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import BoolField from 'uniforms-antd/BoolField';
 import connectField from 'uniforms/connectField';
 import filterDOMProps from 'uniforms/filterDOMProps';
 import { Checkbox } from 'antd';
@@ -17,8 +16,8 @@ class TaskListItem extends Component {
 
     render() {
         const { task, value, ...props } = this.props
-
         const nonUniformProps = filterDOMProps(props);
+
         return (
             <Checkbox
                 defaultChecked={value && value.length > 0}

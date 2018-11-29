@@ -45,13 +45,13 @@ class TaskAddSection extends Component {
         if (!task || task.length === 0) {
             this.showErrorMessage();
         }
-
-
+        /**
+         * Invoke update list method
+         */
         if (task && task.length > 0) {
             updateTaskList(task);
             this.resetLabel();
         }
-
     }
 
     showErrorMessage = () => {
@@ -71,7 +71,7 @@ class TaskAddSection extends Component {
 
     render() {
         const { taskLabel, showAddTaskField } = this.state;
-        const { handleTaskLabelChange, toggleAddTaskState, addTaskToList, hideTextField } = this;
+        const { handleTaskLabelChange, toggleAddTaskState, hideTextField } = this;
         const { name, updateTaskList, ...props } = this.props;
 
         const nonUniformProps = filterDOMProps(props);

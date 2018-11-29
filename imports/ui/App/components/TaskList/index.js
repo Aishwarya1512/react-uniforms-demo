@@ -12,7 +12,6 @@ class TaskList extends Component {
 
     updateTaskListModel = (task, checked) => {
         const { value, onChange } = this.props;
-
         let taskList = [...value];
         /**
          * Add checked item to list
