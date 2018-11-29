@@ -1,0 +1,12 @@
+.task__list_wrapper {
+    margin: 16px 0px;
+}
+.task__list_wrapper .ant-list-header {
+    padding-left: 12px !important;
+}
+.task__list_wrapper .ant-list-item {
+    padding: 12px !important;
+}
+.ant-list-vertical .ant-list-item-content {
+    margin: 0 !important;
+}

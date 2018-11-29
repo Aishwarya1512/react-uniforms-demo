@@ -16,3 +16,11 @@ body {
   margin: 32px 0px 0px 0px;
   justify-content: center;
 }
+.task__title__wrapper {
+  font-size:0.83rem;
+  margin: 16px 0px;
+  text-align:center;
+}
+.task__list {
+  margin-top: 16px;
+}
