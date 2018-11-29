@@ -6,6 +6,7 @@ import { List } from 'antd';
 import TaskListItem from '../TaskListItem';
 import TaskAddSection from '../TaskAddSection';
 import './TaskList.css';
+import filterDOMProps from 'uniforms/filterDOMProps';
 
 class TaskList extends Component {
 
@@ -32,8 +33,11 @@ class TaskList extends Component {
     }
 
     render() {
-        const { list, updateTaskList, label } = this.props;
+        const { list, updateTaskList, label, ...props } = this.props;
         const { updateTaskListModel } = this;
+
+        const nonUniformProps = filterDOMProps(props);
+
         return (
             <Fragment>
                 <List
@@ -56,6 +60,7 @@ class TaskList extends Component {
                                 </List.Item>
                             )
                         }}
+                    {...nonUniformProps}
                 />
                 <TaskAddSection
                     name={`taskList.${list.length + 1}`}
