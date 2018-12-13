@@ -48,6 +48,13 @@ const SignupSchema = new SimpleSchema({
                 return 'TimeRangeStopError';
             }
         }
+    },
+    taskList: {
+        type: Array,
+        optional: true
+    },
+    'taskList.$': {
+        type: String
     }
 });
 

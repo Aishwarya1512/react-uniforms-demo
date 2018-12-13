@@ -28,7 +28,7 @@ const DateRangePicker = ({ onChange, value, label, ...props }) => {
     return (
         <Row span={24}>
             <Col span={24}>
-                {label}:
+                {`${label}: (Task 1)`}
             </Col>
             <Col span={24}>
                 <RangePicker

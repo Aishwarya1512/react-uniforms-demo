@@ -4,6 +4,10 @@ import { Card, notification, Icon } from 'antd';
 
 
 class App extends Component {
+
+    state = {
+        list: ['Task one', 'Task two', 'Task three', 'Task four'],
+    }
    
     handleSubmitSuccess = () => {
        notification.open({
@@ -12,8 +16,19 @@ class App extends Component {
        })
     }
 
+    updateTaskList = (item) => {
+
+        const {list } = this.state;
+        let updatedList = [...list];
+
+        updatedList.push(item);
+
+        this.setState({ list: updatedList });
+    }
+
     render() {
-        const {handleSubmitSuccess} = this;
+        const {handleSubmitSuccess, updateTaskList} = this;
+        const {list} = this.state;
         return (
            <Fragment>
                <h4 className="main__title">React uniform forms</h4>
@@ -21,7 +36,11 @@ class App extends Component {
                 title="Signup Form"
                 className="form__wrapper"
                >
-                <SignupForm handleSubmitSuccess={handleSubmitSuccess} />
+                <SignupForm 
+                    handleSubmitSuccess={handleSubmitSuccess} 
+                    list={list} 
+                    updateTaskList={updateTaskList}
+                />
                </Card>
            </Fragment>
         )

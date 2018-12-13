@@ -57,7 +57,7 @@ const TimeRangePicker = ({ onChange, value, label, ...props }) => {
     return (
         <Row span={24}>
             <Col span={24} className="time-picker-label">
-                {label}:
+                {`${label}: (Task 2)`}
             </Col>
             <Col span={24}>
                 <Col span={8}>
